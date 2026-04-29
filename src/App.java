@@ -1,5 +1,17 @@
+import java.util.LinkedList;
+import java.util.Queue;
+
+import net.salesianoscuesta.Reparacion.Reparacion;
+
 public class App {
     public static void main(String[] args) throws Exception {
-        System.out.println("Hello, World!");
+       
+        Queue<Reparacion> cola = new LinkedList<>();
+
+        //añadir
+        cola.add(new Reparacion("R001", "Ana", "Cambio de pantalla", false));
+        cola.add(new Reparacion("R002", "Luis", "Batería dañada", true));
+        cola.add(new Reparacion("R003", "Marta", "Teclado roto", false));
+        cola.add(new Reparacion("R004", "Pedro", "Puerto de carga", true));
     }
 }
