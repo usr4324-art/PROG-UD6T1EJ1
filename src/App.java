@@ -6,10 +6,10 @@ import net.salesianoscuesta.Reparacion.Reparacion;
 
 public class App {
     public static void main(String[] args) throws Exception {
-       
+
         Queue<Reparacion> cola = new LinkedList<>();
 
-        //añadir
+        // añadir
         cola.add(new Reparacion("R001", "Ana", "Cambio de pantalla", false));
         cola.add(new Reparacion("R002", "Luis", "Batería dañada", true));
         cola.add(new Reparacion("R003", "Marta", "Teclado roto", false));
@@ -20,9 +20,15 @@ public class App {
             System.out.println(r);
         }
 
-         // Mostrar primera reparacion 
+        // Mostrar primera reparacion
         System.out.println("\nSiguiente cliente: " + cola.peek());
 
         Stack<Reparacion> historial = new Stack<>();
+
+        historial.push(cola.poll());
+
+        historial.push(cola.poll());
+
+        System.out.println("\nÚltima reparación finalizada: " + historial.peek());
     }
 }
