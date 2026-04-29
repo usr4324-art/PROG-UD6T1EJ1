@@ -30,5 +30,9 @@ public class App {
         historial.push(cola.poll());
 
         System.out.println("\nÚltima reparación finalizada: " + historial.peek());
+
+        Reparacion extraida = historial.pop();
+        System.out.println("Se ha sacado del archivo la reparación: " + extraida.getCodigo());
+
     }
 }
