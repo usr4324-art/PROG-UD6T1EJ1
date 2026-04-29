@@ -1,5 +1,6 @@
 import java.util.LinkedList;
 import java.util.Queue;
+import java.util.Stack;
 
 import net.salesianoscuesta.Reparacion.Reparacion;
 
@@ -18,5 +19,10 @@ public class App {
         for (Reparacion r : cola) {
             System.out.println(r);
         }
+
+         // Mostrar primera reparacion 
+        System.out.println("\nSiguiente cliente: " + cola.peek());
+
+        Stack<Reparacion> historial = new Stack<>();
     }
 }
