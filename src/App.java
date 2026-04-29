@@ -34,5 +34,13 @@ public class App {
         Reparacion extraida = historial.pop();
         System.out.println("Se ha sacado del archivo la reparación: " + extraida.getCodigo());
 
+         System.out.println("\nQuedan " + cola.size() + " reparaciones en la cola.");
+
+        if (cola.isEmpty()) {
+            System.out.println("¡Buen trabajo! No hay reparaciones pendientes.");
+        } else {
+            System.out.println("Todavía hay trabajo por hacer.");
+        }
+
     }
 }
